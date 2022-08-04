@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 4</title>
+</head>
+
+<body style="height: 100vh;">
+  <section style="display: flex; justify-content: space-around; align-items: center; height: 100%;">
+    <div id="one" style="width: 200px; height: 200px; border-radius: 16px; background-color: #FFDAC6;"></div>
+    <div id="two" style="width: 200px; height: 200px; border-radius: 16px; background-color: #FFDAC6;"></div>
+    <div id="three" style="width: 200px; height: 200px; border-radius: 16px; background-color: #FFDAC6;"></div>
+    <div id="four" style="width: 200px; height: 200px; border-radius: 16px; background-color: #FFDAC6;"></div>
+  </section>
+  <script>
+    let color = "";
+
+    const pintar = (element) => {
+      document.getElementById(element.target.id).style.backgroundColor = color;
+    }
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "a") {
+        color = "#7C6A0A";
+      } else if (event.key === "s") {
+        color = "#BABD8D";
+      } else if (event.key === "d") {
+        color = "#FA9500";
+      } else if (event.key === "f") {
+        color = "#EB6424";
+      }
+    })
+
+    document.addEventListener("click", pintar);
+  </script>
+</body>
+
+</html>
